@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-bool intento(int, int);
+bool intento(int);
 
 
 
@@ -17,16 +17,16 @@ que ingresa mayor al número que está intentando adivinar y cuantos intentos le
 Si el usuario ya no quiere jugar, indicarle qué pulsar para finalizar el programa.
 */
 
-int shhhhh = 70; //Numero secreto
+ 
 cout << "----NUMERO MAGICO ----" << endl;
-cout << "Atrevete a adivinar el numero secreto!  \n(o presiona control + z para deterte) " << endl;
+cout << "Atrevete a adivinar el numero secreto entre 0 y 100!  \n(o presiona control + z para deterte) " << endl;
 int prueba;
 int i = 5;
 cout << "A ver, un intento: " ;
 while(i>0 && cin>>prueba){
 
     
-    if(intento(prueba, shhhhh)){
+    if(intento(prueba)){
         i = 0 ;
         cout << "-----FIN-----" << endl;
 
@@ -34,23 +34,21 @@ while(i>0 && cin>>prueba){
         cout << "-----FIN-----" << endl;
     }else{
         cout << "Te quedan " << i-1 << " intentos"<< endl << endl ;
-    
     }
     i--;
     if(i > 0){
         cout << "Puedes intentarlo aun: ";
-    }
-    
+    }   
+}
 }
 
-
-}
-bool intento(int intento, int secreto){
-        if (intento == secreto){
+bool intento(int intento){
+    int secreto = 56;//numero secreto
+        if (intento ==secreto){
             cout << "WOWWWWWWW, correcto!!! :)" << endl; 
 
             return true;
-        }
+        }   
         else if (intento > secreto)
         {
             cout << "\nNou, nada que ver! \nPISTA: El numero secreto es menor que ese :(" << endl; 
