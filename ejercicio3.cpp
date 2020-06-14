@@ -15,7 +15,7 @@ int main(){
 
     }
     
-    return 0; 
+    return 0; }
     //Funcion booleana que hace las 2 pruebas de los años -- "true" si es bisiesto y "false" si no lo es. 
 bool isBisiesto(int anno){
     //Si el año es multiplo de 400 es bisiesto
