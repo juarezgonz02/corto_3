@@ -20,12 +20,12 @@ int main(){
     
     double salario = sTotal();
     cout << "Salario total: " << salario << "USD del empleado " << n <<endl;
-    cout << "Salario real: " << sReal(salario) << "USD" <<endl;
+    cout << "Salario real: " << sReal(salario) << "USD" <<endl<<endl;
     n++;
 }
     return 0;
 }
-
+//SALARIO TOTAL
 double sTotal(){
     double hora_normal = 1.75;//USD
     double hora_extra = 2.50;//USD
@@ -37,15 +37,15 @@ double sTotal(){
 
     return salario;
 }
-
+//Salario real 
 double sReal(double salario){
   
-    double sReal;
+    double sReal;//iniciador
     double desc_sscc = salario*0.04;//DESCUENTO SEGURO SOCIAL
     double desc_afp = salario*0.0625;//DESCUENTO AFP
     double desc_renta = salario*0.1;//DESCUENTO RENTA
-    double descuento = desc_afp + desc_sscc;
-    if(500.0<salario){descuento+=desc_renta;}
+    double descuento = desc_afp + desc_sscc;//descuento total
+    if(500.0<salario){descuento+=desc_renta;}//si es mayor a 500USD se incluye la renta
 
     sReal = salario - descuento;
 
